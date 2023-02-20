@@ -2,6 +2,24 @@
   text-align: center;
 }
 
+.Main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 200px;
+}
+
+.Start-btn {
+  cursor: pointer;
+  padding: 11px 26px;
+  background-color: white;
+  border: 1px solid #2c3e50;
+  border-radius: 38px;
+}
+.Start-btn:hover {
+  background-color: rgba(44, 62, 80, 0.08);
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
