@@ -1,14 +1,14 @@
-.App {
+.app {
   text-align: center;
 }
-.Main {
+.main {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 50vh;
 }
-.Block-1,
-.Block-2 {
+.block1,
+.block2 {
   height: 100px;
   width: 100px;
   background-color: cadetblue;
@@ -16,13 +16,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: large;
 }
-.Block-1 {
+.block1 {
   position: relative;
   margin-right: 150px;
-  animation: Block-1-move 5s infinite ease;
+  animation: block1-move 5s infinite ease;
 }
-.Start-btn {
+.start_btn {
   cursor: pointer;
   padding: 11px 26px;
   background-color: black;
@@ -30,37 +31,34 @@
   border-radius: 38px;
   color: white;
 }
-.Start-btn:disabled {
+.start_btn:disabled {
   background-color: gray;
 }
 
-.Circle-hidden {
-  display: none;
-}
-.Circle {
+.circle {
   position: absolute;
   height: 40px;
   width: 40px;
   background-color: chartreuse;
   border-radius: 100%;
-  transform: translate(-50%, -50%);
-  animation: moveCircle 2s ease-in-out forwards;
+  top: 0;
+  left: 0;
+}
+.circle_hidden {
+  position: absolute;
+  opacity: 0;
+  height: 40px;
+  width: 40px;
+  top: 0;
+  left: 0;
 }
 
-@keyframes Block-1-move {
+@keyframes block1-move {
   0%,
   100% {
     transform: translate(0, -100%);
   }
   50% {
     transform: translate(0, 100%);
-  }
-}
-@keyframes moveCircle {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(600%, 0);
   }
 }
