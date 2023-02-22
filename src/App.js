@@ -21,8 +21,8 @@ function App() {
     const circleRect = circle.getBoundingClientRect()
 
     // Get the coordinates of the centers of the blocks
-    const startX = block1Rect.left + block1Rect.width / 2
-    const startY = block1Rect.top + block1Rect.height / 2
+    const startX = block1Rect.left + block1Rect.width / 2 - circleRect.width / 2
+    const startY = block1Rect.top + block1Rect.height / 2 - circleRect.width / 2
     const endX = block2Rect.left + block2Rect.width / 2 - circleRect.width / 2
     const endY = block2Rect.top + block2Rect.height / 2 - circleRect.width / 2
 
@@ -64,13 +64,13 @@ function App() {
         <div className='block1' ref={block1Ref}>
           1
         </div>
+        <div className='block2' ref={block2Ref}>
+          2
+        </div>
         <div
           className={circleVisible ? 'circle' : 'circle_hidden'}
           ref={circleRef}
         />
-        <div className='block2' ref={block2Ref}>
-          2
-        </div>
       </div>
       <button
         className='start_btn'
